@@ -1,0 +1,10 @@
+.profile__info .banner {
+	border-radius: 15px;
+	background-size: cover;
+	background-color: #00ba88;
+}
+.banner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
