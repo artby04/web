@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
@@ -9,18 +8,30 @@ import News from "./components/News";
 import Settings from "./components/Settings";
 import Music from "./components/Music";
 
-function App() {
+function App(props) {
 	return (
 		<BrowserRouter>
 			<div className="wrapper">
 				<Header></Header>
 				<Navbar />
 				<div className="app-wrapper-content">
-					<Route exact path="/dialogs" component={Dialogs} />
-					<Route exact path="/profile" component={Profile} />
-					<Route exact path="/news" component={News} />
-					<Route exact path="/music" component={Music} />
-					<Route exact path="/settings" component={Settings} />
+					<Route
+						exact
+						path="/dialogs"
+						render={() => (
+							<Dialogs
+								messagesData={props.state.messagesPage.messages}
+								dialogsData={props.state.messagesPage.dialogs}
+							/>
+						)}
+					/>
+					<Route
+						path="/profile"
+						render={() => <Profile postsData={props.state.profilePage.posts} />}
+					/>
+					<Route path="/news" render={() => <News />} />
+					<Route path="/music" render={() => <Music />} />
+					<Route path="/settings" render={() => <Settings />} />
 				</div>
 			</div>
 		</BrowserRouter>

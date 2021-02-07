@@ -5,7 +5,7 @@ const Post = (props) => {
 		<div className={s.item}>
 			<img
 				src="https://webref.ru/example/image/meduza3.jpg"
-				alt="photo"
+				alt="/"
 				className={s.post__photo}
 			/>
 			{props.message}
