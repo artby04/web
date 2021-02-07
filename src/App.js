@@ -34,52 +34,6 @@ function App(props) {
 					<Route path="/settings" render={() => <Settings />} />
 				</div>
 			</div>
-			<div className="wrapper">
-				<Header></Header>
-				<Navbar />
-				<div className="app-wrapper-content">
-					<Route
-						exact
-						path="/dialogs"
-						render={() => (
-							<Dialogs
-								messagesData={props.state.messagesPage.messages}
-								dialogsData={props.state.messagesPage.dialogs}
-							/>
-						)}
-					/>
-					<Route
-						path="/profile"
-						render={() => <Profile postsData={props.state.profilePage.posts} />}
-					/>
-					<Route path="/news" render={() => <News />} />
-					<Route path="/music" render={() => <Music />} />
-					<Route path="/settings" render={() => <Settings />} />
-				</div>
-			</div>
-			<div className="wrapper">
-				<Header></Header>
-				<Navbar />
-				<div className="app-wrapper-content">
-					<Route
-						exact
-						path="/dialogs"
-						render={() => (
-							<Dialogs
-								messagesData={props.state.messagesPage.messages}
-								dialogsData={props.state.messagesPage.dialogs}
-							/>
-						)}
-					/>
-					<Route
-						path="/profile"
-						render={() => <Profile postsData={props.state.profilePage.posts} />}
-					/>
-					<Route path="/news" render={() => <News />} />
-					<Route path="/music" render={() => <Music />} />
-					<Route path="/settings" render={() => <Settings />} />
-				</div>
-			</div>
 		</BrowserRouter>
 	);
 }
