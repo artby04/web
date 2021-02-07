@@ -14,6 +14,8 @@ let state = {
 			{ id: 3, message: "lusro asre netou yiout" },
 			{ id: 4, message: "netou rawer faqawr " },
 			{ id: 5, message: "Egor" },
+			{ id: 6, message: "Ayrwe" },
+			{ id: 7, message: "How" },
 		],
 		dialogs: [
 			{ id: 1, name: "Atrt" },
@@ -21,6 +23,8 @@ let state = {
 			{ id: 3, name: "Chera" },
 			{ id: 4, name: "Ilased" },
 			{ id: 5, name: "Egor" },
+			{ id: 6, name: "Van" },
+			{ id: 7, name: "Уне" },
 		],
 	},
 };
