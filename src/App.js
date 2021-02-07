@@ -7,10 +7,56 @@ import { BrowserRouter, Route } from "react-router-dom";
 import News from "./components/News";
 import Settings from "./components/Settings";
 import Music from "./components/Music";
-// Hello commit
+
 function App(props) {
 	return (
 		<BrowserRouter>
+			<div className="wrapper">
+				<Header></Header>
+				<Navbar />
+				<div className="app-wrapper-content">
+					<Route
+						exact
+						path="/dialogs"
+						render={() => (
+							<Dialogs
+								messagesData={props.state.messagesPage.messages}
+								dialogsData={props.state.messagesPage.dialogs}
+							/>
+						)}
+					/>
+					<Route
+						path="/profile"
+						render={() => <Profile postsData={props.state.profilePage.posts} />}
+					/>
+					<Route path="/news" render={() => <News />} />
+					<Route path="/music" render={() => <Music />} />
+					<Route path="/settings" render={() => <Settings />} />
+				</div>
+			</div>
+			<div className="wrapper">
+				<Header></Header>
+				<Navbar />
+				<div className="app-wrapper-content">
+					<Route
+						exact
+						path="/dialogs"
+						render={() => (
+							<Dialogs
+								messagesData={props.state.messagesPage.messages}
+								dialogsData={props.state.messagesPage.dialogs}
+							/>
+						)}
+					/>
+					<Route
+						path="/profile"
+						render={() => <Profile postsData={props.state.profilePage.posts} />}
+					/>
+					<Route path="/news" render={() => <News />} />
+					<Route path="/music" render={() => <Music />} />
+					<Route path="/settings" render={() => <Settings />} />
+				</div>
+			</div>
 			<div className="wrapper">
 				<Header></Header>
 				<Navbar />
