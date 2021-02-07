@@ -1,37 +1,40 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import Profile from "./components/Profile";
+import Dialogs from "./components/Dialogs";
+import { BrowserRouter, Route } from "react-router-dom";
+import News from "./components/News";
+import Settings from "./components/Settings";
+import Music from "./components/Music";
 
-function App() {
+function App(props) {
 	return (
-		<div className="wrapper">
-			<header className="header">
-				<div className="header__content">
-					<div className="header__logo">
-						<img src={logo} alt="Logo" />
-					</div>
+		<BrowserRouter>
+			<div className="wrapper">
+				<Header></Header>
+				<Navbar />
+				<div className="app-wrapper-content">
+					<Route
+						exact
+						path="/dialogs"
+						render={() => (
+							<Dialogs
+								messagesData={props.state.messagesPage.messages}
+								dialogsData={props.state.messagesPage.dialogs}
+							/>
+						)}
+					/>
+					<Route
+						path="/profile"
+						render={() => <Profile postsData={props.state.profilePage.posts} />}
+					/>
+					<Route path="/news" render={() => <News />} />
+					<Route path="/music" render={() => <Music />} />
+					<Route path="/settings" render={() => <Settings />} />
 				</div>
-			</header>
-			<nav className="nav">
-				<div>
-					<a href="">Profile</a>
-				</div>
-				<div>
-					<a href="">Messages</a>
-				</div>
-				<div>
-					<a href="">News</a>
-				</div>
-				<div>
-					<a href="">Music</a>
-				</div>
-				<div>
-					<a href="">Settings</a>
-				</div>
-			</nav>
-			<div className="content">
-				<img src="https://miro.medium.com/max/1050/1*Fxa6oJFh2lRD7EnAcZIcQg.png" alt="" />
 			</div>
-		</div>
+		</BrowserRouter>
 	);
 }
 
