@@ -7,6 +7,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import News from "./components/News";
 import Settings from "./components/Settings";
 import Music from "./components/Music";
+import { addPost } from "./redux/state";
 
 function App(props) {
 	return (
@@ -27,7 +28,9 @@ function App(props) {
 					/>
 					<Route
 						path="/profile"
-						render={() => <Profile postsData={props.state.profilePage.posts} />}
+						render={() => (
+							<Profile postsData={props.state.profilePage.posts} addPost={props.addPost} />
+						)}
 					/>
 					<Route path="/news" render={() => <News />} />
 					<Route path="/music" render={() => <Music />} />
