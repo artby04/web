@@ -29,9 +29,14 @@ function App(props) {
 					<Route
 						path="/profile"
 						render={() => (
-							<Profile postsData={props.state.profilePage.posts} addPost={props.addPost} />
+							<Profile
+								updateNewPostText={props.updateNewPostText}
+								postsData={props.state.profilePage}
+								addPost={props.addPost}
+							/>
 						)}
 					/>
+
 					<Route path="/news" render={() => <News />} />
 					<Route path="/music" render={() => <Music />} />
 					<Route path="/settings" render={() => <Settings />} />
@@ -40,5 +45,4 @@ function App(props) {
 		</BrowserRouter>
 	);
 }
-
 export default App;
