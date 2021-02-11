@@ -7,7 +7,6 @@ import { BrowserRouter, Route } from "react-router-dom";
 import News from "./components/News";
 import Settings from "./components/Settings";
 import Music from "./components/Music";
-import { addPost } from "./redux/state";
 
 function App(props) {
 	return (
