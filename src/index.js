@@ -24,3 +24,5 @@ let rerenderEntireTree = (state) => {
 rerenderEntireTree(state);
 subscribe(rerenderEntireTree);
 reportWebVitals();
+
+// OOP

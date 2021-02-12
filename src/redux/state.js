@@ -53,3 +53,5 @@ export const subscribe = (observer) => {
 };
 
 export default state;
+
+// OOP
