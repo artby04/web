@@ -7,13 +7,12 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 
-let rerenderEntireTree = (state) => {
+let rerenderEntireTree = () => {
 	ReactDOM.render(
 		<BrowserRouter>
 			<App
 				state={store.getState()}
-				addPost={store.addPost.bind(store)}
-				updateNewPostText={store.updateNewPostText.bind(store)}
+				dispatch = {store.dispatch.bind(store)}
 			/>
 		</BrowserRouter>,
 		document.getElementById("root")
