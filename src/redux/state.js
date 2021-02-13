@@ -41,7 +41,7 @@ let store = {
 	subscribe(observer) {
 		this._callSubscriber = observer;
 	},
-	
+
 	dispatch(action) {
 		if (action.type === "ADD-POST") {
 			let newPost = {
@@ -57,6 +57,19 @@ let store = {
 			this._callSubscriber(this._state);
 		}
 	},
+};
+
+export const addPostActionCreater = () => {
+	return {
+		type: "ADD-POST",
+	};
+};
+
+export const updateNEwPostTextActionCreator = (text) => {
+	return {
+		type: "UPDATE-NEW-POST-TEXT",
+		newText: text
+	};
 };
 
 export default store;
