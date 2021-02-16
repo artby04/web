@@ -70,3 +70,5 @@ export const updateNEwPostTextActionCreator = (text) => ({
 
 export default store;
 window.store = store;
+
+//41
