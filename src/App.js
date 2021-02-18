@@ -7,6 +7,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import News from "./components/News";
 import Settings from "./components/Settings";
 import Music from "./components/Music";
+import store from "./redux/state"
 
 function App(props) {
 	return (
@@ -19,8 +20,8 @@ function App(props) {
 						path="/dialogs"
 						render={() => (
 							<Dialogs
-								messagesData={props.state.messagesPage.messages}
-								dialogsData={props.state.messagesPage.dialogs}
+								
+								store={props.store}
 							/>
 						)}
 					/>
