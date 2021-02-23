@@ -1,0 +1,22 @@
+.dialog.active {
+	color: #fff;
+	background-color: #00ba88;
+	
+}
+.dialog.active .navlink {
+	color: #fff;
+}
+.dialog {
+	letter-spacing: 0.75px;
+	font-size: 15px;
+	line-height: 28px;
+	opacity: 0.7;
+	padding: 12px 20px;
+	background: #eff0f6;
+	border-radius: 15px;
+	margin-bottom: 15px;
+	position: relative;
+}
+.navlink {
+	color: #a0a3bd;
+}
