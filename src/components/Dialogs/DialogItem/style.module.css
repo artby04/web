@@ -1,6 +1,7 @@
 .dialog.active {
 	color: #fff;
 	background-color: #00ba88;
+	
 }
 .dialog.active .navlink {
 	color: #fff;
